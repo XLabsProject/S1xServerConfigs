@@ -1,0 +1,19 @@
+@echo off
+::///////////////////////////////////////////////////////////////////////
+::///  	         S1x Client Configuration start-up file	  		      ///
+::///////////////////////////////////////////////////////////////////////
+::// This config best view with Notepad++ or other non-windows notepad //
+::///////////////////////////////////////////////////////////////////////
+
+:: Either put the batch in the S1x install dir, or change the value below to the S1x install dir
+set XLABS_AW_INSTALL=%~dp0
+
+:: Remove this line, if automatic updates on start should be disabled
+start /W xlabs.exe -update
+
+::///////////////////////////////////////////////////////////////////////
+:://You're done!! WARNING!!! Don't mess with anything below this line  //
+::///////////////////////////////////////////////////////////////////////
+
+set GAME_EXE=%localappdata%\xlabs\data\s1x\s1x.exe
+start %GAME_EXE%
